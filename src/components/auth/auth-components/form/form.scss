@@ -1,0 +1,19 @@
+.register-form {
+  width: 528px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 48px 56px;
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 32px;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .register-form {
+    padding: calc(24px + (48 - 24) * ((100vw - 320px) / (768 - 320)))
+      calc(16px + (56 - 16) * ((100vw - 320px) / (768 - 320)));
+    width: calc(288px + (528 - 288) * ((100vw - 320px) / (768 - 320)));
+  }
+}

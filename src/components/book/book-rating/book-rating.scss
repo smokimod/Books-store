@@ -1,0 +1,87 @@
+.bookItem-rating {
+  display: flex;
+  flex-direction: column;
+  height: 88px;
+  width: 100%;
+}
+.user-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  h5 {
+    color: #363636;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    padding-bottom: 16px;
+    width: 350px;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .bookItem-rating-star {
+    width: 221px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .score {
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #363636;
+  }
+}
+@media (max-width: 768px) {
+  .user-score {
+    h5 {
+      font-size: 16px !important;
+      font-weight: 600;
+      width: 305px;
+    }
+  }
+}
+@media (min-width: 321px) and (max-width: 690px) {
+  .bookItem-rating {
+    width: 100%;
+  }
+}
+@media (max-width: 330px) {
+  .user-score {
+    h5 {
+      width: 290px;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .bookItem-rating {
+    height: 78px;
+  }
+  .user-score {
+    width: 288px;
+    h5 {
+      font-size: 18px !important;
+      font-weight: 700;
+      margin-bottom: 8px;
+      width: 288px;
+    }
+  }
+  .bookItem-rating-star.res {
+    width: 288px;
+    height: 34px;
+    margin: 0;
+    align-items: center;
+  }
+  .rating-start {
+    height: 34px;
+    width: 34px;
+  }
+  .score {
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #363636;
+  }
+}

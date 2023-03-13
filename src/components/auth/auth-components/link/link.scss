@@ -1,0 +1,35 @@
+.next-move-question {
+  font-size: 16px;
+  line-height: 24px;
+  color: #727272;
+  display: flex;
+}
+.logIn-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #363636;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  div {
+    height: 24px;
+    width: 24px;
+  }
+}
+@media (max-width: 320px) {
+  .next-move-container {
+    font-size: 15px;
+    .next-move-question {
+      height: 48px;
+      flex-direction: column;
+    }
+    .logIn-link {
+      padding-left: 0;
+      font-size: 12px;
+    }
+  }
+}

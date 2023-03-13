@@ -1,0 +1,128 @@
+.terms-section {
+  height: 100%;
+  max-width: 825px;
+}
+.rules-wraper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rules-logo {
+  line-height: 40px;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.term-bold {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.termOne,
+.termOne.item,
+.termTwo.item,
+.termThree.item {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(54, 54, 54, 1);
+}
+
+.termOne.item,
+.termTwo.item,
+.termThree.item {
+  font-weight: 400;
+}
+
+.active {
+  font-weight: 700;
+  background: linear-gradient(231.58deg, #f83600 -53.35%, #f9d423 297.76%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.term-bold,
+.termOne.item.rule-gap,
+.rule-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rule-section-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.termOne.item,
+.termTwo.item,
+.termThree.item {
+  line-height: 20px;
+  padding-left: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .terms-section {
+    width: calc(640px + (825 - 640) * ((100vw - 768px) / (1440 - 768)));
+  }
+}
+@media (max-width: 768px) {
+  .term-bold,
+  .termOne.item.rule-gap,
+  .rule-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .rule-section-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .termOne.item,
+  .termTwo.item,
+  .termThree.item {
+    line-height: 20px;
+    padding-left: 30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .terms-section {
+    width: calc(288px + (640 - 288) * ((100vw - 320px) / (768 - 320)));
+  }
+}
+@media (max-width: 320px) {
+  .rules-logo {
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .termOne {
+    font-size: 32px;
+    line-height: 24px;
+  }
+  .termOne.item,
+  .termTwo.item,
+  .termThree.item {
+    font-size: 15px;
+    line-height: 20px;
+    padding-left: 30px;
+  }
+}
+
+.term-bold,
+.termOne.item.rule-gap,
+.rule-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rule-section-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

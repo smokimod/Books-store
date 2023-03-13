@@ -1,0 +1,141 @@
+$bgcolor: linear-gradient(231.58deg, #f83600 -53.35%, #f9d423 297.76%);
+.books {
+  min-height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+.no-results,
+.no-category {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  div {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #a7a7a7;
+  }
+}
+
+.article-section.hidden {
+  visibility: hidden;
+  pointer-events: none;
+  width: 825px;
+}
+.article-section {
+  width: 825px;
+}
+.navigation-wraper {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  width: 100%;
+}
+.navigation-menu {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+}
+.empty-result {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+input[type="search"] {
+  padding-left: 45px;
+}
+
+label {
+  position: relative;
+  &::placeholder {
+    content: "";
+  }
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+}
+
+.icon-crest {
+  position: relative;
+}
+
+.btn-squre,
+.btn-plate {
+  fill: currentColor;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .article-section {
+    width: calc(540px + (825 - 540) * ((100vw - 768px) / (1440 - 768)));
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .article-section {
+    width: calc(288px + (640 - 288) * ((100vw - 320px) / (768 - 320)));
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-wraper {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .no-results,
+  .no-category {
+    font-size: 18px;
+    line-height: 28px;
+    width: 288px;
+    text-align: center;
+  }
+  .seacrh-button.disable {
+    display: none;
+  }
+
+  // .seacrh-button {
+  //   display: block;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 32px;
+  //   height: 32px;
+  //   img {
+  //     filter: invert(81%) sepia(5%) saturate(14%) hue-rotate(350deg)
+  //       brightness(83%) contrast(87%);
+  //   }
+  // }
+
+  input[type="search"] {
+    padding-left: 0;
+  }
+
+  .btn-plate,
+  .btn-squre {
+    height: 45%;
+    width: 45%;
+  }
+  .navigation-wraper {
+    gap: 16px;
+  }
+  label {
+    height: 32px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "smokimod",
+		"path": "../../smokimod"
+	},
+	{
+		"name": "Books-store",
+		"path": ".."
+	}
+],
+  "settings": {}
+}

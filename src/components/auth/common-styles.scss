@@ -1,0 +1,154 @@
+.register-steps {
+  height: 56px;
+  h2 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #363636;
+  }
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #363636;
+  }
+}
+.reg-required-inputs-container {
+  display: flex;
+  flex-direction: column;
+  height: 184px;
+  gap: 36px;
+  input {
+    font-size: 14px;
+    line-height: 18px;
+    background: #f9f9fa;
+    border-radius: 4px;
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-bottom: solid 1px #bfc4c9;
+    padding-left: 12px;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  label {
+    height: 56px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #a7a7a7;
+    position: relative;
+    display: inline-block;
+    div {
+      padding-top: 2px;
+      padding-left: 12px;
+    }
+  }
+
+  span {
+    color: #363636;
+    padding: 20px 10px 0px 10px;
+    pointer-events: none;
+    position: absolute;
+    font-size: 14px;
+    left: 0;
+    top: 0;
+    width: 250px;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  .icon-eye,
+  .icon-password {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    background: none;
+    color: inherit;
+    border: none;
+    text-align: start;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+  }
+  .icon-password {
+    right: 44px;
+    top: 16px;
+  }
+
+  input:focus + span,
+  input:not(:placeholder-shown) + span {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 1;
+    transform: scale(0.75) translateY(-100%) translateX(-30px);
+    letter-spacing: 0.2px;
+    color: #a7a7a7;
+    line-height: 16px;
+    width: 220px;
+    font-weight: 500;
+  }
+}
+.restore-password {
+  color: #a7a7a7;
+  left: 12px;
+  bottom: 20px;
+  position: relative;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  .pass-error {
+    color: #a7a7a7;
+    bottom: 10px;
+    position: relative;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    a {
+      position: relative;
+      top: 20px;
+      right: 190px;
+      color: #363636;
+    }
+  }
+}
+.next-move-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+@media (max-width: 405px) {
+  .restore-password {
+    .pass-error {
+      bottom: 10px;
+      position: relative;
+      a {
+        position: relative;
+        top: 5px;
+        right: 0;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .reg-required-inputs-container {
+    gap: 32px;
+  }
+  .next-move-container {
+    font-size: 15px;
+  }
+  .restore-password {
+    bottom: 10px;
+  }
+}

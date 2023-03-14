@@ -43,7 +43,7 @@ export const Menu = ({ showArticle, hanbdleClose }) => {
         <ul className={isTogleMenu ? 'navigation disabled' : 'navigation'}>
           {categories.map((item, i) =>
             i === 0 ? (
-              <li className='first-li' key={i.path}>
+              <li className='first-li' key={Math.floor(Math.random() * i)}>
                 <NavLink
                   to='/books/all'
                   className={setActive}

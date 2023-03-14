@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
@@ -10,12 +10,14 @@ import { BookComents } from './book-coments/book-coments';
 import { BookRating } from './book-rating/book-rating';
 import { BookSlider } from './book-slider/book-slider';
 import { BreadCrumbs } from './bread-crumbs/bread-crumbs';
+import { Comment } from './comment/comment';
 
 import './book-page.scss';
 
 export const BookPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const [showComment, setShowComment] = useState(false);
   const loading = useSelector((state) => state.books.loading);
   const currentBook = useSelector((state) => state.books.currentBook);
   const categories = useSelector((state) => state.books.categories);
@@ -32,6 +34,10 @@ export const BookPage = () => {
 
     getBookRequestById();
   }, [id, dispatch, categories]);
+
+  const handleShowComment = () => {
+    setShowComment(!showComment);
+  };
 
   return loading ? (
     <Loader />
@@ -72,9 +78,10 @@ export const BookPage = () => {
             </div>
 
             <div className='book-summary'>
+              <Comment showComment={showComment} handleShowComment={handleShowComment} />
               <BookRating rating={rating} />
               <AdditionalInfoBook />
-              <BookComents comments={comments} />
+              <BookComents comments={comments} handleShowComment={handleShowComment} />
             </div>
           </section>
         </div>

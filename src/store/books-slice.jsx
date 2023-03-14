@@ -40,3 +40,14 @@ export const CategoryOfBooksSlice = () => async (dispatch) => {
     dispatch(errorBooksRequest(err));
   }
 };
+
+export const CommentSlice = () => async (dispatch) => {
+  dispatch(loadingBooksRequest());
+  try {
+    const genreSearchRequest = await AuthFetch('/categories');
+
+    await dispatch(getCategoryBookRequest(genreSearchRequest));
+  } catch (err) {
+    dispatch(errorBooksRequest(err));
+  }
+};

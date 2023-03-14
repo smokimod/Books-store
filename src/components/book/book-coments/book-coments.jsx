@@ -6,7 +6,7 @@ import userIcon from '../../../icons/comment_icon.svg';
 
 import './book-coments.scss';
 
-export const BookComents = ({ comments = [] }) => {
+export const BookComents = ({ comments = [], handleShowComment }) => {
   const [showComments, setShownComments] = useState(false);
 
   return (
@@ -58,7 +58,7 @@ export const BookComents = ({ comments = [] }) => {
             : null}
         </div>
       ) : null}
-      <button data-test-id='button-rating' type='button' className='set-a-comment'>
+      <button data-test-id='button-rating' type='button' className='set-a-comment' onClick={handleShowComment}>
         оценить книгу
       </button>
     </div>

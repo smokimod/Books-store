@@ -8,6 +8,7 @@ const CATEGORY_OF_BOOKS = 'CATEGORY_OF_BOOKS';
 const initialState = {
   currentBook: [],
   books: [],
+  comment: [],
   categories: [],
   loading: false,
   error: false,
@@ -25,6 +26,7 @@ export const booksReducer = (state = initialState, action) => {
       return { ...state, loading: false, error: true };
     case CATEGORY_OF_BOOKS:
       return { ...state, loading: false, categories: action.payload.data };
+
     default:
       return state;
   }

@@ -21,6 +21,7 @@ export const authReducer = (state = initialState, action) => {
         error: action.payload,
         loading: false,
       };
+
     default:
       return state;
   }

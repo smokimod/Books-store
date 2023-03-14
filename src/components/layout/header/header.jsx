@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 
 import avatar from '../../../icons/avatar.png';
 
-import './header.scss';
 import { ProfileLogout } from './profile-logout/profile-logout';
+
+import './header.scss';
 
 export const Header = ({ closeBurger }) => {
   const dispatch = useDispatch();

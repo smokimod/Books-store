@@ -1,8 +1,9 @@
-const GET_BOOKS = "GET_BOOKS";
-const GET_CURRENT_BOOK = "GET_CURRENT_BOOK";
-const LOADING_BOOKS = "LOADING_BOOKS";
-const ERROR_BOOKS = "ERROR_BOOKS";
-const CATEGORY_OF_BOOKS = "CATEGORY_OF_BOOKS";
+/* eslint-disable unicorn/filename-case */
+const GET_BOOKS = 'GET_BOOKS';
+const GET_CURRENT_BOOK = 'GET_CURRENT_BOOK';
+const LOADING_BOOKS = 'LOADING_BOOKS';
+const ERROR_BOOKS = 'ERROR_BOOKS';
+const CATEGORY_OF_BOOKS = 'CATEGORY_OF_BOOKS';
 
 const initialState = {
   currentBook: [],
